@@ -1,6 +1,10 @@
 from django.shortcuts import render
+from django.template import Context, Template
 
-posts = [
+
+
+def home(request):
+	posts = [
 	{
 	'author': 'sreekanth',
 	'title': 'blog post1',
@@ -14,8 +18,6 @@ posts = [
 	'date_posted': '20 may 2019'
 	}
 ]
-
-def home(request):
 	context = {
 		'posts': posts
 	}
